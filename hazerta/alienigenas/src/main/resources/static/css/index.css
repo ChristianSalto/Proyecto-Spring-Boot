@@ -1,0 +1,28 @@
+table {
+  border-collapse: collapse;
+  margin: auto;
+}
+th,
+tr,
+td {
+  border: 1px solid #000;
+  width: 150px;
+  height: 45px;
+  vertical-align: middle;
+  text-align: center;
+}
+th {
+  color: #fff;
+  background-color: #252525;
+}
+
+tr:nth-child(odd) td {
+  background-color: #eee;
+}
+div {
+  text-align: center;
+}
+
+.cntr_tbl {
+  margin-top: 100px;
+}

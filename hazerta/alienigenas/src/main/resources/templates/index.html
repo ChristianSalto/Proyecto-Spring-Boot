@@ -3,9 +3,34 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" th:href="@{/css/index.css}" />
     <title>Alienigenas</title>
   </head>
   <body>
-    <h1 th:text="${mensaje}"></h1>
+    <header>
+      <div>
+        <h1 th:text="${mensaje}"></h1>
+      </div>
+    </header>
+    <main>
+      <div class="cntr_tbl">
+        <table>
+          <thead>
+            <tr>
+              <th>Id</th>
+              <th>Nombre</th>
+              <th>CodPlaneta</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr th:each="aliens : ${aliens}">
+              <td th:text="${aliens.id}"></td>
+              <td th:text="${aliens.nombre}"></td>
+              <td th:text="${aliens.codPlaneta}"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
   </body>
 </html>

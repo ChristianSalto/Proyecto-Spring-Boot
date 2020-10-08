@@ -4,6 +4,8 @@ import javax.persistence.Entity;
 import javax.persistence.Table;
 import javax.persistence.Id; 
 import javax.persistence.Column;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 @Entity
 @Table(name="alienigena")
@@ -16,6 +18,17 @@ public class Alienigena {
     @Column(name="nombre")
     private String nombre;
 
+    
+    @Column(name="codplaneta", nullable = false)
+    private int codPlaneta;
+
+    public int getCodPlaneta() {
+        return this.codPlaneta;
+    }
+
+    public void setCodPlaneta(int codPlaneta) {
+        this.codPlaneta = codPlaneta;
+    }
 
     public int getId() {
         return this.id;
